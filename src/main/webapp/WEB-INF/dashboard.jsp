@@ -16,5 +16,21 @@
 <br>
 <h5>TV Shows</h5>
 
+<table class="table table-striped">
+    <tr>
+        <th class="text-primary">Show</th>
+        <th class="text-primary">Network</th>
+        <th class="text-primary">Average</th>
+    </tr>
+    <c:forEach items="${shows}" var="show">
+        <tr>
+            <td><a href="/shows/${show.id}">${show.title}</a></td>
+            <td>${show.network}</td>
+            <td>${show.average}</td>
+        </tr>
+    </c:forEach>
+</table>
+<br>
+<a href="/shows/new" class="btn btn-info">Add a show</a>
 </body>
 </html>

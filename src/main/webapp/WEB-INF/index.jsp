@@ -7,17 +7,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login and registration</title>
+    <title>Project Manager</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-<h1>Welcome!</h1>
-<h2>Join our growing community</h2>
+<h1 class="text-center text-primary">TV Shows Database</h1>
 <br>
 <div class="container d-flex">
+    <div class="container d-flex">
     <%--@elvariable id="newUser" type="javax"--%>
     <form:form action="/register" method="post" modelAttribute="newUser">
-        <p>Register</p>
+        <h3 class="text-primary">Register</h3>
         <p>
             <form:label path="username">Username:</form:label>
             <form:input path="username" class="form-control" type="text"></form:input>
@@ -40,12 +39,12 @@
         </p>
         <button class="btn btn-primary">Submit</button>
     </form:form>
-</div>
+    </div>
 <br>
-<div class="container d-flex">
+    <div class="container d-flex">
     <%--@elvariable id="newLogin" type="newLogin"--%>
     <form:form action="/login" method="post" modelAttribute="newLogin">
-        <p>Log in</p>
+        <h3 class="text-primary">Log in</h3>
         <p>
             <form:label path="email">Email:</form:label>
             <form:input path="email" class="form-control" type="text"></form:input>
@@ -58,6 +57,7 @@
         </p>
         <button class="btn btn-primary">Submit</button>
     </form:form>
+    </div>
 </div>
 
 </body>
